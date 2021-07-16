@@ -450,9 +450,7 @@ class MainPage extends StatelessWidget{
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Image(
-                    image: AssetImage('./assets/Camera2.png'),
-                    // height:100,
-                    // width:10,
+                    image: AssetImage('./assets/Camera2.png'),/**/
                   ),
                 ),
             ),
@@ -2334,6 +2332,20 @@ class DMPage extends StatelessWidget{
               Navigator.pushNamed(context, '/MainPage');
             }
         ),
+        title:  Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.lock_rounded,color: Colors.black,size:15,),
+            Text(
+              'jacob_w',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 16,
+              ),
+            ),
+            Icon(Icons.keyboard_arrow_down,color: Colors.black,),
+          ],
+        ),
         actions: [
           Icon(
             Icons.add,
@@ -3315,8 +3327,7 @@ class SearchPage extends StatelessWidget{
         elevation: 0,
         backgroundColor: Colors.white,
         title: Container(
-          margin: EdgeInsets.fromLTRB(0, 20, 5, 10),
-          width: double.infinity,
+          margin: EdgeInsets.fromLTRB(10, 20, 0, 10),
           height: 35,
           decoration: BoxDecoration(
             color: Color.fromRGBO(230,230,230, 1),
@@ -3334,9 +3345,12 @@ class SearchPage extends StatelessWidget{
           ),
         ),
         actions: [
-          Icon(
-            Icons.add,
-            color: Colors.black,
+          Padding(
+            padding: const EdgeInsets.only(right:10.0),
+            child: Icon(
+              Icons.add,
+              color: Colors.black,
+            ),
           ),
         ],
       ),
@@ -3637,18 +3651,20 @@ class ProfilePage extends StatelessWidget{
         toolbarHeight: 50,
         elevation: 0,
         backgroundColor: Colors.white,
-        title: Container(
-            child: Center(
-              child: Text(
-                'jacob_w',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16,
-                ),
-              ),
+        title:  Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.lock_rounded,color: Colors.black,size:15,),
+                  Text(
+                    'jacob_w',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                    ),
+                  ),
+                  Icon(Icons.keyboard_arrow_down,color: Colors.black,),
+                ],
             )
-        ),
-
       ),
 
       body: Column(
