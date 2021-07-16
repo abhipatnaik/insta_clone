@@ -446,53 +446,57 @@ class MainPage extends StatelessWidget{
         toolbarHeight: 55,
         elevation: 0,
         backgroundColor: Colors.white,
+        leading:  Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Image(
+                    image: AssetImage('./assets/Camera2.png'),
+                    // height:100,
+                    // width:10,
+                  ),
+                ),
+            ),
+
         title: Container(
-          width: double.infinity,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Center(
+                child: Image(
+                  alignment: Alignment.center,
+                  image: AssetImage('assets/InstagramName.png'),
+                  height: 40,
+                ),
+              ),
+        ),
+
+        actions: [
+          Row(
             children: <Widget>[
-              Image(
-                //color: Colors.red,
-                image: AssetImage('./assets/Camera2.png'),
-                height:25,
-                width:25,
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Image(
+                  image: AssetImage('./assets/TV.png'),
+                  height: 25,
+                  width: 25,
+                ),
               ),
-              Image(
-                alignment: Alignment.center,
-                image: AssetImage('assets/InstagramName.png'),
-                height: 40,
-              ),
-              Row(
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Image(
-                      image: AssetImage('./assets/TV.png'),
-                      height: 25,
-                      width: 25,
+              Padding(
+                padding: const EdgeInsets.only(right:10),
+                child: InkWell(
+                  child: Container(
+                    child:Image(
+                      image: AssetImage('./assets/DM.png'),
+                      color: Colors.black,
+                      height:25,
+                      width:25,
                     ),
                   ),
-                  InkWell(
-                    child: Container(
-                      child:Image(
-                        image: AssetImage('./assets/DM.png'),
-                        color: Colors.black,
-                        height:25,
-                        width:25,
-                      ),
-                    ),
-                    onTap: (){
-                      Navigator.pushNamed(context, '/DMPage');
-                    },
-                  ),
-                ],
+                  onTap: (){
+                    Navigator.pushNamed(context, '/DMPage');
+                  },
+                ),
               ),
-
-
             ],
           ),
-
-        ),
+        ],
       ),
 
       body: ListView(
@@ -888,8 +892,8 @@ class MainPage extends StatelessWidget{
                     child: RichText(
                         text: TextSpan(
                             children: [
-                              TextSpan(text: 'julian_c ', style: TextStyle(fontWeight: FontWeight.bold)),
-                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.')
+                              TextSpan(text: 'julian_c ', style: TextStyle(fontWeight: FontWeight.bold, color:Colors.black)),
+                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.',style: TextStyle(color:Colors.black))
                             ]
                         )
                     )
@@ -1032,8 +1036,8 @@ class MainPage extends StatelessWidget{
                     child: RichText(
                         text: TextSpan(
                             children: [
-                              TextSpan(text: 'andrea_ ', style: TextStyle(fontWeight: FontWeight.bold)),
-                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.')
+                              TextSpan(text: 'andrea_ ', style: TextStyle(fontWeight: FontWeight.bold, color:Colors.black)),
+                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.',style: TextStyle(color:Colors.black))
                             ]
                         )
                     )
@@ -1176,8 +1180,8 @@ class MainPage extends StatelessWidget{
                     child: RichText(
                         text: TextSpan(
                             children: [
-                              TextSpan(text: 'vinicus ', style: TextStyle(fontWeight: FontWeight.bold)),
-                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.')
+                              TextSpan(text: 'vinicus ', style: TextStyle(fontWeight: FontWeight.bold, color:Colors.black)),
+                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.',style: TextStyle(color:Colors.black))
                             ]
                         )
                     )
@@ -1319,8 +1323,8 @@ class MainPage extends StatelessWidget{
                     child: RichText(
                         text: TextSpan(
                             children: [
-                              TextSpan(text: 'selover ', style: TextStyle(fontWeight: FontWeight.bold)),
-                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.')
+                              TextSpan(text: 'selover ', style: TextStyle(fontWeight: FontWeight.bold, color:Colors.black)),
+                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.',style: TextStyle(color:Colors.black))
                             ]
                         )
                     )
@@ -1463,8 +1467,8 @@ class MainPage extends StatelessWidget{
                     child: RichText(
                         text: TextSpan(
                             children: [
-                              TextSpan(text: 'kevin_malone ', style: TextStyle(fontWeight: FontWeight.bold)),
-                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.')
+                              TextSpan(text: 'kevin_malone ', style: TextStyle(fontWeight: FontWeight.bold, color:Colors.black)),
+                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.',style: TextStyle(color:Colors.black))
                             ]
                         )
                     )
@@ -1606,8 +1610,8 @@ class MainPage extends StatelessWidget{
                     child: RichText(
                         text: TextSpan(
                             children: [
-                              TextSpan(text: 'cooljoe ', style: TextStyle(fontWeight: FontWeight.bold)),
-                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.')
+                              TextSpan(text: 'cooljoe ', style: TextStyle(fontWeight: FontWeight.bold, color:Colors.black)),
+                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.',style: TextStyle(color:Colors.black))
                             ]
                         )
                     )
@@ -1750,8 +1754,8 @@ class MainPage extends StatelessWidget{
                     child: RichText(
                         text: TextSpan(
                             children: [
-                              TextSpan(text: 'jennie ', style: TextStyle(fontWeight: FontWeight.bold)),
-                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.')
+                              TextSpan(text: 'jennie ', style: TextStyle(fontWeight: FontWeight.bold, color:Colors.black)),
+                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.',style: TextStyle(color:Colors.black))
                             ]
                         )
                     )
@@ -1893,8 +1897,8 @@ class MainPage extends StatelessWidget{
                     child: RichText(
                         text: TextSpan(
                             children: [
-                              TextSpan(text: 'brett ', style: TextStyle(fontWeight: FontWeight.bold)),
-                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.')
+                              TextSpan(text: 'brett ', style: TextStyle(fontWeight: FontWeight.bold, color:Colors.black)),
+                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.',style: TextStyle(color:Colors.black))
                             ]
                         )
                     )
@@ -2037,8 +2041,8 @@ class MainPage extends StatelessWidget{
                     child: RichText(
                         text: TextSpan(
                             children: [
-                              TextSpan(text: 'aidil ', style: TextStyle(fontWeight: FontWeight.bold)),
-                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.')
+                              TextSpan(text: 'aidil ', style: TextStyle(fontWeight: FontWeight.bold, color:Colors.black)),
+                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.',style: TextStyle(color:Colors.black))
                             ]
                         )
                     )
@@ -2181,8 +2185,8 @@ class MainPage extends StatelessWidget{
                     child: RichText(
                         text: TextSpan(
                             children: [
-                              TextSpan(text: 'piacquadio ', style: TextStyle(fontWeight: FontWeight.bold)),
-                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.')
+                              TextSpan(text: 'piacquadio ', style: TextStyle(fontWeight: FontWeight.bold, color:Colors.black)),
+                              TextSpan(text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue.',style: TextStyle(color:Colors.black))
                             ]
                         )
                     )
@@ -2252,7 +2256,7 @@ class MainPage extends StatelessWidget{
                     InkWell(
                         child: Container(
                           child: Image(
-                            image: AssetImage('./assets/Heart_Blank.png'),
+                            image: AssetImage('./assets/heart_blank.png'),
                             height:25,
                             width: 25,
                           ),
@@ -3569,7 +3573,7 @@ class SearchPage extends StatelessWidget{
                     InkWell(
                         child: Container(
                           child: Image(
-                            image: AssetImage('./assets/Heart_Blank.png'),
+                            image: AssetImage('./assets/heart_blank.png'),
                             height:25,
                             width: 25,
                           ),
@@ -3842,7 +3846,7 @@ class ProfilePage extends StatelessWidget{
                     InkWell(
                         child: Container(
                           child: Image(
-                            image: AssetImage('./assets/Heart_Blank.png'),
+                            image: AssetImage('./assets/heart_blank.png'),
                             height:25,
                             width: 25,
                           ),
